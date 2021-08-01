@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Card(props){
     const getRating = ()=>{
@@ -16,20 +17,20 @@ function Card(props){
     }
     return <>
     <div className="col-sm-6 col-lg-4 mb-5 hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
-            <div className="card h-100 border-0 shadow">
-              <div className="card-img-top overflow-hidden dark-overlay bg-cover" style={{backgroundImage : `url(${props.cardData.source})`, minHeight: '200px'}}><a className="tile-link" href="detail.html"></a>
+            <div className="card h-100 border-0 shadow"  style={{borderRadius:"20px"}}>
+              <div className="card-img-top overflow-hidden dark-overlay bg-cover" style={{backgroundImage : `url(${props.cardData.source})`, minHeight: '200px'}}><Link className="tile-link" to='/menu/:id'></Link>
                 <div className="card-img-overlay-bottom z-index-20">
-                  <h4 className="text-white text-shadow">{props.cardData.title}</h4>
+                  
                   <p className="mb-2 text-xs">{getRating()}
                   </p>
                 </div>
                 
               </div>
               <div className="card-body">
+              <h4 className="text-black text-shadow">{props.cardData.title}</h4>
                 <p className="text-sm text-muted mb-3">{props.cardData.description}</p>
-                <p className="text-sm text-muted text-uppercase mb-1">By <a href="#" className="text-dark">Matt Damon</a></p>
-                <p className="text-sm mb-0"><a className="me-1" href="#">Restaurant,</a><a className="me-1" href="#">Contemporary</a>
-                </p>
+                <p> &#8377; {props.cardData.avgPrice} for two</p>
+               
               </div>
             </div>
           </div>

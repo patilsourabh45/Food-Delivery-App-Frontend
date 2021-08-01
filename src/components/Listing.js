@@ -10,83 +10,85 @@ function Listing(props) {
     axios
       .get("https://myjson.dit.upm.es/api/bins/n5i")
       .then((resp) => {
-        console.log(resp);
+        console.log(JSON.parse(resp));
+        setCards(JSON.parse(resp).data);
       })
       .catch(() => {
-        let resp = {
-          data: [
+        let resp ={
+         data: [
             {
               id: 23,
-              title: "title 23",
+              title: "Hotel Season 4",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ngrhdmlxm4eriy9rj0wz",
-              description: " 3 to 4 words desc",
+              description: "Paneer, Maharashtrian Food, Beverages",
               rating: 4,
               avgPrice: 300,
             },
             {
               id: 2,
-              title: "title 2",
+              title: "Galaxy Biryani",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/i1klgny2esmjqeoz8hsg",
-              description: " 3 to 4 words desc",
+              description: "Biryani, Chinese, Kabab",
               rating: 5,
               avgPrice: 300,
             },
             {
               id: 3,
-              title: "title 3",
+              title: "Palvi Hotel",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/czyvgxfuosm00dxkzpcf",
-              description: " 3 to 4 words desc",
+              description: "Kaju Masala, Icecream, Juice",
               rating: 3,
               avgPrice: 300,
             },
             {
               id: 4,
-              title: "title 4",
+              title: "Shake Factory",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/g0zhkvhtuwxab3xstmko",
-              description: " 3 to 4 words desc",
+              description: "Mango Shake, Mojito, Beverages",
               rating: 4,
               avgPrice: 300,
             },
             {
               id: 1,
-              title: "title 1",
+              title: "Sahyadri Hotel",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ngrhdmlxm4eriy9rj0wz",
-              description: " 3 to 4 words desc",
+              description: "Paneer, Icecream, Pizza",
               rating: 4,
               avgPrice: 300,
             },
             {
               id: 5,
-              title: "title 5",
+              title: "Golden Dum Biryani",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/i1klgny2esmjqeoz8hsg",
-              description: " 3 to 4 words desc",
+              description: "Chicken Biryani, Chinese, Chicken Lollipop",
               rating: 5,
               avgPrice: 300,
             },
             {
               id: 6,
-              title: "title 6",
+              title: "Swarup Hotel",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/czyvgxfuosm00dxkzpcf",
-              description: " 3 to 4 words desc",
+              description: "Pizza, Veg Biryani, Icecream",
               rating: 3,
               avgPrice: 300,
             },
             {
               id: 7,
-              title: "title 7",
+              title: "Greenpark Hotel",
               source:
                 "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/g0zhkvhtuwxab3xstmko",
-              description: " 3 to 4 words desc",
+              description: "Juice, Mojito, Shakes",
               rating: 4,
               avgPrice: 300,
             },
+            
           ],
         };
         setCards(resp.data)

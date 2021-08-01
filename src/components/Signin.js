@@ -1,7 +1,6 @@
 import React from 'react'
-import logo from './logo192.png'
-import './Signin.css';
-import bodyphoto from './signupphoto.jpeg'
+import '../css/Signin.css';
+import bodyphoto from '../images/signupphoto.jpeg'
 
 function SignIn() {
     return (
