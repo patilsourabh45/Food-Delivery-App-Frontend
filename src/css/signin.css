@@ -1,0 +1,57 @@
+.Signin{
+    position: absolute;
+    left: 50%;
+    top: 230%;
+    transform: translate(-50%, -50%);
+    width:450px;
+    height:350px;
+    margin-top: -60px;
+  
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    color:black;
+    font-style: bold;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px; 
+    background-image: url('../images/signupphoto.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.Signup{
+position: absolute;
+left: 50%;
+top: 230%;
+transform: translate(-50%, -50%);
+width:450px;
+height:425px;
+line-height: 5px;
+margin-top: 13px;
+
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: center;
+padding-left: 20px;
+color:black;
+font-style: bold;
+font-weight: 500;
+background-color: rgba(0, 0, 0, 0.4);
+border-radius: 20px; 
+background-image: url('../images/signupphoto.jpeg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.form-label{
+color:black;
+font-weight: 500;
+font-size: medium;
+}
