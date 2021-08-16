@@ -3,9 +3,9 @@
     left: 50%;
     top: 230%;
     transform: translate(-50%, -50%);
-    width:450px;
-    height:350px;
-    margin-top: -80px;
+    width:400px;
+    height:300px;
+    margin-top: -60px;
   
     display: flex;
     align-content: center;
@@ -28,8 +28,8 @@ position: absolute;
 left: 50%;
 top: 230%;
 transform: translate(-50%, -50%);
-width:450px;
-height:425px;
+width:400px;
+height:370px;
 line-height: 5px;
 margin-top: 13px;
 
