@@ -7,7 +7,7 @@ import HomePage from '../pages/HomePage';
 import Pagenotfound from './Pagenotfound';
 import Myorders from './Myorders'
 import SignUp from './Signup';
-import SignIn from './Signin';
+import LoginPage from '../pages/LoginPage';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Switch>
         <Route path='/' component={HomePage} exact></Route>
         <Route path='/aboutus' component={Aboutus} ></Route>
-        <Route path='/login' component={SignIn} ></Route>
+        <Route path='/login' component={LoginPage} ></Route>
         <Route path='/signup' component={SignUp} ></Route>
         <Route path='/myorders' component={Myorders} ></Route>
         <Route path='*' component={Pagenotfound}></Route>
