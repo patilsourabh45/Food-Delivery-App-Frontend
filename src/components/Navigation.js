@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/swiggy.png'
+import '../css/index.css'
+
 function Navigation(props) {
   return <>
     <nav className="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
