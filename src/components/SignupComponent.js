@@ -28,8 +28,9 @@ class SignupComponent extends React.Component {
       .then(response => {
         console.log(JSON.stringify(response));
         if (response.status === 200) {
-          this.setState({ state: AvailableStates.SUCCESS })
-         history.push('./login')
+          this.setState({ state: AvailableStates.SUCCESS });
+          history.push('/')
+
         }
         else {
           this.setState({ state: AvailableStates.ERROR });
@@ -62,7 +63,6 @@ class SignupComponent extends React.Component {
           state === AvailableStates.SUCCESS && (
             <>
               <div> Signup successfull! </div>
-              
 
             </>
           )
