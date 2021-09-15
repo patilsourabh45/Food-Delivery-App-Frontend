@@ -1,6 +1,6 @@
 import Main from './Main'
 import Basket from './Basket'
-import data from '../data'
+import data from '../Data'
 import {useState} from 'react'
 import React from 'react'
 
