@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/swiggy.png'
-import '../css/index.css'
-
 function Navigation(props) {
   return <>
     <nav className="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
@@ -15,11 +13,12 @@ function Navigation(props) {
 
           <ul className="navbar-nav ms-auto">
 
-          <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
             <li className="nav-item" ><Link className="nav-link" to="/aboutus">About Us</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/signup">Sign up</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/myorders">My orders</Link></li>
+            
 
           </ul>
         </div>

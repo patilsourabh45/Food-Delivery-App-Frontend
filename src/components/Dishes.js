@@ -1,48 +1,29 @@
-import Main from './Main'
-import Basket from './Basket'
-import data from '../Data'
-import {useState} from 'react'
-import React from 'react'
-
-function Dishes() {
-    const { products } = data;
-    const [cartItems, setCartItems] = useState([]);
-    const onAdd = (product) => {
-      const exist = cartItems.find((x) => x.id === product.id);
-      if (exist) {
-        setCartItems(
-          cartItems.map((x) =>
-            x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-          )
-        );
-      } else {
-        setCartItems([...cartItems, { ...product, qty: 1 }]);
-      }
-    };
-    const onRemove = (product) => {
-      const exist = cartItems.find((x) => x.id === product.id);
-      if (exist.qty === 1) {
-        setCartItems(cartItems.filter((x) => x.id !== product.id));
-      } else {
-        setCartItems(
-          cartItems.map((x) =>
-            x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-          )
-        );
-      }
-    };
+import { useState } from "react";
+import '../css/Menu.css';
+import Cartcounter from "./Cartcounter";
+function Dishes(props) {
     return (
         <>
-            <div className="row" style={{marginTop:'-50px'}}>
-                <Main products={products} onAdd={onAdd}></Main>
-                <Basket
-                    cartItems={cartItems}
-                    onAdd={onAdd}
-                    onRemove={onRemove}
-                ></Basket>
+            <div class="container">  
+                <div class="row">
+                    <div class="col">
+                    <h4 className="Price">{props.name}</h4>   
+                    </div>
+                    <div class="col">
+                    <span> &#8377; {props.value}</span>
+                    </div>
+                    <div class="col">
+                    <Cartcounter className="Price"></Cartcounter>
+                    </div>
+                </div>
             </div>
-        </>
-    )
-}
+            <hr></hr>
 
-export default Dishes
+
+            
+
+        </>
+    );
+
+}
+export default Dishes;

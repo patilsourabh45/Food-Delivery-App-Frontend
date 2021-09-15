@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
     width:400px;
     height:300px;
-    margin-top: -60px;
+    margin-top: 0px;
   
     display: flex;
     align-content: center;
@@ -29,7 +29,7 @@ left: 50%;
 top: 230%;
 transform: translate(-50%, -50%);
 width:400px;
-height:370px;
+height:350px;
 line-height: 5px;
 margin-top: 13px;
 
@@ -55,3 +55,13 @@ color:black;
 font-weight: 500;
 font-size: medium;
 }
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+  }

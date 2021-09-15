@@ -1,5 +1,4 @@
-import React from 'react';
-import '../css/aboutus.css'
+import '../css/Aboutus.css'
 import Founder from '../images/Founder.jpg'
 import CEO from '../images/CEO.jpg'
 import Chairman from '../images/Chairman.jpg'
@@ -11,11 +10,12 @@ function Aboutus() {
             <p className="aboutus">At Swiggy, we build products & solutions that redefine the food ordering & delivery space in India, every single day. The best part?
                 Every bit of your work at Swiggy will help us change the way India eats!</p>
 
-            <div className="row row-cols-1 row-cols-md-4 g-4">
-                <div className="col">
-                    <div className="card">
+            <div className="row row-cols-1 row-cols-md-4 g-4" >
+                <div className="col" >
+                    <div className="card" style={{borderRadius:'10px'}}>
                         <img src={Founder} className="card-img-top" height="300px" alt="..." />
                         <div className="card-body">
+                            
                             <h5 className="card-title">Founder</h5>
                             <p className="card-text"><h5 style={{fontWeight:700}}>Mr. Amol Patil</h5></p>
                         </div>

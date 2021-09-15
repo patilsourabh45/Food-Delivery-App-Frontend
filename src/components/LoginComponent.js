@@ -2,9 +2,9 @@ import React from 'react';
 import LoginForm from '../forms/LoginForm';
 import Loader from './Loader';
 import { loginApi } from '../api/authApi';
-import { createBrowserHistory } from 'history';
-
-let history = createBrowserHistory();
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom'
+import '../css/Signin.css'
 
 const AvailableStates = {
   NEW: 'NEW',
@@ -29,7 +29,7 @@ class LoginComponent extends React.Component {
       console.log(JSON.stringify(response));
       if (response.status === 200) {
         this.setState({ state: AvailableStates.SUCCESS });
-        history.push('/aboutus')
+        this.props.history.push('/')
       
       }
       else {
@@ -56,7 +56,13 @@ class LoginComponent extends React.Component {
         }
         {
           state === AvailableStates.ERROR && (
-            <div> Error occurred </div>
+            <>
+              <div className="center">
+                <div>Invalid email or password</div>
+                <br></br>
+                <button type="button" class="btn btn-primary"><Link style={{ textDecoration: 'none', color: "white" }} to="./">Login</Link> </button>
+              </div>
+            </>
           )
         }
         {
@@ -75,4 +81,4 @@ class LoginComponent extends React.Component {
   }
 }
 
-export default LoginComponent;
+export default withRouter(LoginComponent);

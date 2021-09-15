@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Loader from './Loader';
 import RestaurantCard from './RestaurantCard';
 import { getRestaurants } from '../api/restaurantApi'
-
+;
 const AvailableStates = {
   NEW: 'NEW',
   LOADING: 'LOADING',
@@ -27,8 +27,7 @@ class RestaurantComponent extends React.Component {
     .then(response => {
       if (response.status === 200) {
         this.setState({ state: AvailableStates.SUCCESS ,
-        restaurants: response.data});
-      
+        restaurants: response.data });
       }
       else {
         console.log(`Error occurred ${response.status}`);

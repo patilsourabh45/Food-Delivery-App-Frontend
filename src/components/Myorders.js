@@ -1,5 +1,5 @@
 import React from 'react';
-function Myorders(){
+function AboutUs(){
     return <>
     <h1>My orders</h1>
     <div className="col-sm-6 col-lg-4 mb-5 hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
@@ -47,4 +47,4 @@ function Myorders(){
     
     </>
 }
-export default Myorders;
+export default AboutUs;
